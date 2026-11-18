@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Diagnostic Exercises</title>
+    <link rel="stylesheet" href="diagnostic.css">
+</head>
+
+<body>
+
+    <h1>CSS Diagnostic Exercises</h1>
+
+    <!-- 10. Z-Index Bug -->
+    <section class="diagnostic-section">
+        <h2>10. Z-Index Bug</h2>
+
+        <p>
+            The blue child has z-index: 9999, but the red box
+            appears above it because the red box belongs to a
+            higher parent stacking context.
+        </p>
+
+        <div class="z-index-container">
+
+            <div class="parent-one">
+                <div class="box-one">
+                    Blue child: 9999
+                </div>
+            </div>
+
+            <div class="parent-two">
+                <div class="box-two">
+                    Red child: 1
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 11. Specificity Conflict -->
+    <section class="diagnostic-section">
+        <h2>11. Specificity Conflict</h2>
+
+        <p>
+            The ID selector beats the class selector.
+            The more specific combined selector fixes the conflict.
+        </p>
+
+        <p id="special-text" class="highlight-text">
+            This text should be green after the fix.
+        </p>
+    </section>
+
+    <!-- 12. Margin Collapse -->
+    <section class="diagnostic-section">
+        <h2>12. Margin Collapse</h2>
+
+        <h3>Example A: Margin collapse</h3>
+
+        <div class="collapse-parent">
+            <div class="collapse-child">
+                Parent-child margin collapse example
+            </div>
+        </div>
+
+        <h3>Example B: Preventing margin collapse</h3>
+
+        <div class="no-collapse-parent">
+            <div class="no-collapse-child">
+                The parent uses display: flow-root
+            </div>
+        </div>
+    </section>
+
+</body>
+
+</html>

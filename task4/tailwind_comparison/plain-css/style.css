@@ -1,0 +1,225 @@
+
+/* 1. Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 2. Main page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f5fb;
+    color: #222;
+    min-height: 100vh;
+}
+
+/* 3. Header styling */
+.header {
+    text-align: center;
+    padding: 50px 20px 30px;
+}
+
+.header h1 {
+    font-size: 36px;
+    color: #635bdb;
+    margin-bottom: 10px;
+}
+
+.header p {
+    color: #666;
+    font-size: 16px;
+}
+
+/* 4. Pricing container */
+.pricing-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    padding: 30px 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* 5. Pricing cards */
+.pricing-card {
+    background-color: white;
+    padding: 35px 25px;
+    border-radius: 14px;
+    width: 100%;
+    max-width: 340px;
+    text-align: center;
+    border: 1px solid #e5e5e5;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+}
+
+/* 6. Card hover effect */
+.pricing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* 7. Highlighted pricing card */
+.popular {
+    border: 2px solid #635bdb;
+    transform: scale(1.04);
+}
+
+.popular:hover {
+    transform: scale(1.04) translateY(-8px);
+}
+
+/* 8. Popular badge */
+.badge {
+    display: inline-block;
+    background-color: #635bdb;
+    color: white;
+    padding: 7px 15px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 18px;
+}
+
+/* 9. Pricing card headings */
+.pricing-card h2 {
+    font-size: 23px;
+    margin-bottom: 12px;
+}
+
+/* 10. Description */
+.description {
+    color: #777;
+    margin-bottom: 25px;
+}
+
+/* 11. Price */
+.pricing-card h3 {
+    font-size: 36px;
+    margin-bottom: 25px;
+    color: #635bdb;
+}
+
+.pricing-card h3 span {
+    font-size: 14px;
+    color: #777;
+    font-weight: normal;
+}
+
+/* 12. Feature list */
+.pricing-card ul {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.pricing-card li {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+/* 13. Buttons */
+.pricing-card button {
+    width: 100%;
+    padding: 13px;
+    background-color: #635bdb;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pricing-card button:hover {
+    background-color: #4940bd;
+}
+
+/* 14. Footer */
+footer {
+    text-align: center;
+    padding: 35px 20px;
+    color: #777;
+    font-size: 13px;
+}
+
+/* 15. Responsive design */
+@media (max-width: 850px) {
+    .pricing-container {
+        flex-wrap: wrap;
+    }
+
+    .pricing-card {
+        max-width: 420px;
+    }
+
+    .popular {
+        transform: none;
+    }
+
+    .popular:hover {
+        transform: translateY(-8px);
+    }
+}
+
+/* 16. Mobile design */
+@media (max-width: 550px) {
+    .pricing-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pricing-card {
+        max-width: 100%;
+    }
+
+    .header h1 {
+        font-size: 30px;
+    }
+}
+
+/* 17. Dark mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #121221;
+        color: #f5f5f5;
+    }
+
+    .header h1 {
+        color: #a49bff;
+    }
+
+    .header p {
+        color: #bbb;
+    }
+
+    .pricing-card {
+        background-color: #202035;
+        border-color: #383850;
+    }
+
+    .pricing-card h3 {
+        color: #a49bff;
+    }
+
+    .pricing-card h3 span,
+    .description,
+    footer {
+        color: #bbb;
+    }
+
+    .pricing-card li {
+        border-color: #383850;
+    }
+
+    .popular {
+        border-color: #a49bff;
+    }
+
+    .badge {
+        background-color: #635bdb;
+    }
+}

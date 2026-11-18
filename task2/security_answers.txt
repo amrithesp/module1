@@ -1,0 +1,13 @@
+# Why Client-Side Validation Is Not Enough to Secure a Registration Form
+
+Client-side validation is useful for improving user experience, but it is not enough to secure a registration form. It helps users identify mistakes before submitting the form, but it cannot be trusted as the only security layer.
+
+First, users can disable JavaScript in their browsers. When JavaScript is disabled, custom client-side validation may not work. Second, users can open browser developer tools and modify HTML attributes such as `required`, `min`, `max`, `maxlength`, and `pattern`. Therefore, a form that appears valid in the browser may contain invalid data when submitted.
+
+Attackers can also bypass the browser completely by sending HTTP requests directly using tools such as `curl` or Postman. These requests can contain invalid ages, unexpected field values, modified hidden fields, or malicious input. Hidden fields are not secure because users can inspect and change their values.
+
+For these reasons, the server must independently validate every submitted field. It should check data types, allowed values, lengths, formats, and required fields before accepting the registration. File uploads also need server-side checks for file size, permitted formats, and actual file content. The server should not trust a filename or extension alone.
+
+Additionally, applications must safely escape untrusted data when displaying it in HTML to prevent cross-site scripting (XSS). Appropriate output encoding and other security protections should be used.
+
+In conclusion, client-side validation improves usability, while server-side validation enforces security. Both are important, but the server must always treat submitted data as untrusted and verify it independently before processing or storing it.

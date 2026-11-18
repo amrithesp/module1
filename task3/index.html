@@ -1,0 +1,246 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LearnHub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="page-layout">
+
+        <header>
+            <nav>
+                <div>
+                    <p class="logo">LearnHub</p>
+                    <a href="#home">Home</a>
+                    <a href="#courses">Courses</a>
+                    <a href="#features">Features</a>
+                    <a href="#reviews">Reviews</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </nav>
+        </header>
+
+        <aside>
+            <h2>LearnHub</h2>
+            <p>Explore</p>
+            <a href="#courses">Web Development</a>
+            <a href="#courses">Programming</a>
+            <a href="#courses">Data Science</a>
+            <a href="#courses">AI &amp; ML</a>
+        </aside>
+
+        <main>
+
+            <section id="home">
+                <div>
+                    <h1>Learn New Skills Anytime</h1>
+                    <p>Build your career with expert-led online courses.</p>
+                    <button type="button" onclick="document.getElementById('courses').scrollIntoView({ behavior: 'smooth' })">
+                        Start Learning
+                    </button>
+                    <button type="button" onclick="document.getElementById('courses').scrollIntoView({ behavior: 'smooth' })">
+                        View Courses
+                    </button>
+                </div>
+
+                <div>
+                    <img
+                        src="https://t4.ftcdn.net/jpg/20/13/07/89/360_F_2013078955_opch8eRZAaCwgH8OQGSPdABnL8eHwkUr.jpg"
+                        alt="Person learning online using a laptop">
+                </div>
+            </section>
+
+            <section id="features">
+                <div>
+                    <h3>100+ Courses</h3>
+                    <p>Latest industry topics.</p>
+                </div>
+
+                <div>
+                    <h3>Expert Mentors</h3>
+                    <p>Learn from professionals.</p>
+                </div>
+
+                <div>
+                    <h3>Lifetime Access</h3>
+                    <p>Study whenever you want.</p>
+                </div>
+            </section>
+
+            <section id="courses">
+                <h2>Popular Courses</h2>
+
+                <div class="cards">
+
+                    <div class="card">
+                        <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsubI1xnS2EsbFC7IKOtHXy3o2yp5zNGHX8-mLk-0nVw&s"
+                            alt="HTML course">
+                        <h3>HTML</h3>
+                        <p>Build beautiful webpages.</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="https://cdn-icons-png.flaticon.com/512/919/919826.png"
+                            alt="CSS course">
+                        <h3>CSS</h3>
+                        <p>Create modern layouts.</p>
+                    </div>
+
+                    <div class="card">
+                        <img
+                            src="https://cdn.hashnode.com/res/hashnode/image/upload/v1739013258340/0b029386-744a-4f57-bfde-1091c94d11ae.png"
+                            alt="JavaScript course">
+                        <h3>JavaScript</h3>
+                        <p>Make websites interactive.</p>
+                    </div>
+
+                    <div class="card">
+                        <img
+                            src="https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/1280px-React-icon.svg.png"
+                            alt="React course">
+                        <h3>React</h3>
+                        <p>Create powerful web apps.</p>
+                    </div>
+
+                    <div class="card">
+                        <img
+                            src="https://raw.githubusercontent.com/docker-library/docs/01c12653951b2fe592c1f93a13b4e289ada0e3a1/python/logo.png"
+                            alt="Python course">
+                        <h3>Python</h3>
+                        <p>Programming made easy.</p>
+                    </div>
+
+                    <div class="card">
+                        <img
+                            src="https://www.syntera.ch/blog/wp-content/uploads/2024/07/dajngo.jpg"
+                            alt="Django course">
+                        <h3>Django</h3>
+                        <p>Build backend applications.</p>
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="stats">
+                <div>
+                    <h3>12K+</h3>
+                    <p>Students</p>
+                </div>
+
+                <div>
+                    <h3>150+</h3>
+                    <p>Courses</p>
+                </div>
+
+                <div>
+                    <h3>45+</h3>
+                    <p>Mentors</p>
+                </div>
+
+                <div>
+                    <h3>4.9★</h3>
+                    <p>Rating</p>
+                </div>
+            </section>
+
+            <section id="reviews">
+                <h2>Student Reviews</h2>
+
+                <div class="review-list">
+                    <article>
+                        <p>Excellent platform for learning.</p>
+                        <p><strong>John</strong></p>
+                    </article>
+
+                    <article>
+                        <p>Very good mentors and projects.</p>
+                        <p><strong>Sarah</strong></p>
+                    </article>
+
+                    <article>
+                        <p>Highly recommended for beginners.</p>
+                        <p><strong>David</strong></p>
+                    </article>
+                </div>
+            </section>
+
+            <section id="contact">
+                <h2>Ready to Start Learning?</h2>
+
+                <form id="contact-form">
+                    <div class="form-row">
+                        <div>
+                            <label for="name">Name</label>
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Enter your name"
+                                required>
+                        </div>
+
+                        <div>
+                            <label for="email">Email</label>
+                            <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                placeholder="Enter your email"
+                                required>
+                        </div>
+                    </div>
+
+                    <button type="submit">Join Now</button>
+                </form>
+            </section>
+
+            <!-- Welcome modal -->
+            <div class="modal" id="welcome-modal" role="dialog"
+                aria-modal="true" aria-labelledby="welcome-title">
+
+                <div class="modal-content">
+                    <h2 id="welcome-title">Welcome to LearnHub</h2>
+                    <p>Start learning new skills and build your career.</p>
+                    <button type="button" id="close-modal">Close</button>
+                </div>
+
+            </div>
+
+        </main>
+
+        <footer>
+            <p>&copy; 2026 LearnHub. All Rights Reserved.</p>
+        </footer>
+
+    </div>
+
+    <script>
+        const modal = document.getElementById("welcome-modal");
+        const closeButton = document.getElementById("close-modal");
+
+        closeButton.addEventListener("click", function () {
+            modal.style.display = "none";
+        });
+
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") {
+                modal.style.display = "none";
+            }
+        });
+
+        document.getElementById("contact-form").addEventListener("submit", function (event) {
+            event.preventDefault();
+            alert("Thank you for joining LearnHub!");
+        });
+    </script>
+
+</body>
+</html>
+```

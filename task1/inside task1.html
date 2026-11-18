@@ -1,0 +1,246 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Introduction to Front-End Development</title>
+
+    <meta
+        name="description"
+        content="A beginner-friendly article about HTML, CSS, JavaScript and web accessibility."
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JavaScript loading examples for the assignment -->
+    <script src="plain.js"></script>
+    <script src="async.js" async></script>
+    <script src="defer.js" defer></script>
+</head>
+
+<body>
+
+    <!-- Skip link: allows keyboard users to skip navigation -->
+    <a class="skip-link" href="#main-content">
+        Skip to main content
+    </a>
+
+    <header>
+        <h1>Introduction to Front-End Development</h1>
+    </header>
+
+    <nav aria-label="Article sections">
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#html">HTML Basics</a></li>
+            <li><a href="#css">CSS Styling</a></li>
+            <li><a href="#javascript">JavaScript</a></li>
+            <li><a href="#accessibility">Web Accessibility</a></li>
+            <li><a href="#comparison">Technology Comparison</a></li>
+        </ul>
+    </nav>
+
+    <main id="main-content" tabindex="-1">
+
+        <article>
+
+            <section id="introduction">
+                <h2>What Is Front-End Development?</h2>
+
+                <p>
+                    Front-end development focuses on building the user
+                    interface of websites and applications.
+                </p>
+
+                <figure>
+                    <img
+                        src="https://placehold.co/600x300?text=Front-End+Workflow"
+                        alt="Illustration representing a front-end development workflow"
+                    >
+                    <figcaption>
+                        An illustration of a front-end development workflow.
+                    </figcaption>
+                </figure>
+
+                <p>
+                    Published on
+                    <time datetime="2026-09-13">September 13, 2026</time>
+                </p>
+            </section>
+
+            <section id="html">
+                <h2>HTML Basics</h2>
+
+                <h3>Structure</h3>
+
+                <p>
+                    HTML provides the structure of a webpage using elements
+                    such as headings, paragraphs, links and images.
+                </p>
+
+                <figure>
+                    <img
+                        src="https://i.ytimg.com/vi/0XB84_F8RnI/maxresdefault.jpg"
+                        alt="Example of HTML code used to structure a webpage"
+                    >
+                    <figcaption>
+                        HTML defines the structure and content of a webpage.
+                    </figcaption>
+                </figure>
+            </section>
+
+            <section id="css">
+                <h2>CSS Styling</h2>
+
+                <h3>Colors and Layout</h3>
+
+                <p>
+                    CSS controls the appearance of a webpage, including
+                    colors, fonts, spacing and layout.
+                </p>
+
+                <figure>
+                    <img
+                        src="https://codingjasimweb.com/wp-content/uploads/elementor/thumbs/css-evalution-qn6b7vjh2pre9226skh55ntm8k0tsxit9y7eh5zfcg.png"
+                        alt="Example illustrating CSS styling for a webpage"
+                    >
+                    <figcaption>
+                        CSS helps create attractive and readable web layouts.
+                    </figcaption>
+                </figure>
+            </section>
+
+            <section id="javascript">
+                <h2>JavaScript</h2>
+
+                <h3>Interactivity</h3>
+
+                <p>
+                    JavaScript adds interactive behavior to websites,
+                    such as responding to user actions and updating content.
+                </p>
+
+                <figure>
+                    <img
+                        src="https://1.bp.blogspot.com/-KHgQ-5TVcWo/YMrbn-AGB3I/AAAAAAAABoQ/1FuhukZNNBA_hPcvFZrMj4DyS-KmYOxJACLcBGAsYHQ/s933/Untitled.png"
+                        alt="JavaScript code example illustrating website interactivity"
+                    >
+                    <figcaption>
+                        JavaScript can make a webpage interactive.
+                    </figcaption>
+                </figure>
+            </section>
+
+            <section id="accessibility">
+                <h2>Web Accessibility</h2>
+
+                <h3>Why It Matters</h3>
+
+                <p>
+                    Web accessibility helps people with different abilities
+                    use websites, including people who rely on keyboards
+                    or screen readers.
+                </p>
+
+                <figure>
+                    <img
+                        src="https://pinkdogdigital.com/wp-content/uploads/2024/04/The-Role-of-Accessibility-in-Modern-Web-Design.jpg"
+                        alt="Illustration representing accessibility in web design"
+                    >
+                    <figcaption>
+                        Accessible design helps more people use websites.
+                    </figcaption>
+                </figure>
+
+                <!-- Decorative image: intentionally empty alternative text -->
+                <img
+                    src="https://t3.ftcdn.net/jpg/02/26/57/24/360_F_226572424_X5ldGN8o6JqfNXMboqND2dXHSAV7eVX2.jpg"
+                    alt=""
+                >
+            </section>
+
+            <section id="comparison">
+                <h2>Comparison of Technologies</h2>
+
+                <table>
+                    <caption>
+                        Front-end technologies and their purposes
+                    </caption>
+
+                    <thead>
+                        <tr>
+                            <th scope="col">Technology</th>
+                            <th scope="col">Purpose</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <th scope="row">HTML</th>
+                            <td>Provides webpage structure and content</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">CSS</th>
+                            <td>Controls appearance and layout</td>
+                        </tr>
+
+                        <tr>
+                            <th scope="row">JavaScript</th>
+                            <td>Adds interactive behavior</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+        </article>
+
+        <aside aria-labelledby="related-heading">
+            <h2 id="related-heading">Related Information</h2>
+
+            <ul>
+                <li>
+                    <a href="https://developer.mozilla.org/en-US/docs/Learn/Front-end_web_developer">
+                        MDN Front-End Developer Guide
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.w3schools.com/html/">
+                        W3Schools HTML Tutorial
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.freecodecamp.org/">
+                        freeCodeCamp Web Development
+                    </a>
+                </li>
+            </ul>
+
+            <p>
+                Tip: Use semantic HTML elements to communicate the purpose
+                of each part of your webpage.
+            </p>
+
+            <p>
+                Note: CSS Flexbox and Grid are useful tools for modern layouts.
+            </p>
+        </aside>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Front-End Development Guide</p>
+
+        <p>
+            <a href="mailto:info@example.com">Contact Us</a>
+        </p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secure Registration Form</title>
+</head>
+<body>
+
+  <h1>Registration Form</h1>
+
+  <form action="/register" method="post"
+      enctype="multipart/form-data" novalidate>
+
+    <!-- Step 1: Personal Information -->
+    <section id="step-1">
+      <h2>Step 1: Personal Information</h2>
+
+      <label for="fullname">Full Name</label>
+      <input
+        type="text"
+        id="fullname"
+        name="fullname"
+        required
+        minlength="2"
+        maxlength="50"
+        pattern="[A-Za-z][A-Za-z ]{1,49}"
+        title="Enter 2–50 characters using letters and spaces."
+        autocomplete="name"
+        aria-describedby="error-fullname"
+      >
+      <p id="error-fullname" class="error" aria-live="polite"></p>
+
+      <label for="age">Age</label>
+      <input
+        type="number"
+        id="age"
+        name="age"
+        required
+        min="18"
+        max="100"
+        step="1"
+        title="Age must be between 18 and 100."
+      >
+      <p id="error-age" class="error" aria-live="polite"></p>
+
+      <label for="email">Email Address</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        required
+        maxlength="254"
+        autocomplete="email"
+        aria-describedby="error-email"
+      >
+      <p id="error-email" class="error" aria-live="polite"></p>
+
+      <!--
+        Use type="tel", not type="number", because a phone number
+        is an identifier, not a quantity. It may start with zero
+        and may include a country code.
+      -->
+      <label for="phone">Phone Number</label>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        required
+        pattern="[0-9]{10}"
+        title="Enter exactly 10 digits."
+        autocomplete="tel"
+        aria-describedby="error-phone"
+      >
+      <p id="error-phone" class="error" aria-live="polite"></p>
+
+      <button type="button" id="next-1">Next</button>
+    </section>
+
+    <!-- Step 2: Account Details -->
+    <section id="step-2" hidden>
+      <h2>Step 2: Account Details</h2>
+
+      <label for="password">Create Password</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        required
+        minlength="8"
+        maxlength="20"
+        autocomplete="new-password"
+        aria-describedby="error-password"
+      >
+      <p id="error-password" class="error" aria-live="polite"></p>
+
+      <fieldset>
+        <legend>Choose your role</legend>
+
+        <label>
+          <input type="radio" name="role" value="student" required>
+          Student
+        </label>
+
+        <label>
+          <input type="radio" name="role" value="teacher">
+          Teacher
+        </label>
+        <p id="error-role" class="error" aria-live="polite"></p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Select your interests</legend>
+
+        <label>
+          <input type="checkbox" name="interests" value="coding">
+          Coding
+        </label>
+
+        <label>
+          <input type="checkbox" name="interests" value="music">
+          Music
+        </label>
+
+        <label>
+          <input type="checkbox" name="interests" value="sports">
+          Sports
+        </label>
+        <p id="error-interests" class="error" aria-live="polite"></p>
+      </fieldset>
+
+      <button type="button" id="back-2">Back</button>
+      <button type="button" id="next-2">Next</button>
+    </section>
+
+    <!-- Step 3: File Upload -->
+    <section id="step-3" hidden>
+      <h2>Step 3: Upload Profile Picture</h2>
+
+      <label for="profilepic">
+        Profile Picture (PNG or JPEG, maximum 2 MB)
+      </label>
+
+      <input
+        type="file"
+        id="profilepic"
+        name="profilepic"
+        accept="image/png,image/jpeg"
+        required
+        aria-describedby="error-profilepic"
+      >
+      <p id="error-profilepic" class="error" aria-live="polite"></p>
+
+      <button type="button" id="back-3">Back</button>
+      <button type="submit">Register</button>
+    </section>
+
+    <!-- This fixed value is not a secret or a security token. -->
+    <input type="hidden" name="form_id" value="registration_v1">
+
+  </form>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

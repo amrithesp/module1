@@ -1,0 +1,21 @@
+## Screen Reader Testing Reflection
+
+I tested my HTML webpage using NVDA, a screen reader for Windows. During the test, I checked whether the page headings, links, images, table, and landmarks could be navigated and understood through speech. NVDA was able to move through the headings and links and announce meaningful descriptions for informative images. It also recognized my comparison table and announced its caption, along with the number of rows and columns.
+
+The most confusing part was navigating the table. I found it difficult to move between individual table cells using the keyboard, and some commands reported that I was not inside a table cell. This helped me understand that screen-reader navigation can work differently from ordinary mouse navigation.
+
+I improved my webpage by organizing headings logically and adding useful alternative text to informative images. Overall, the webpage was mostly understandable when tested with NVDA, although table navigation was less straightforward. This experience showed me the importance of testing accessibility with real assistive technology.
+
+
+
+## Why Does Semantic HTML Matter?
+
+Semantic HTML matters for three main reasons.
+
+**1. Improved accessibility:** Semantic elements such as `<header>`, `<nav>`, `<main>`, and `<footer>` help screen readers understand the structure of a webpage. Proper headings, descriptive links, and table headers allow users with disabilities to navigate and understand content more easily.
+
+**2. Better code readability and maintenance:** Semantic elements describe the purpose of different sections. For example, using `<article>` for an independent article is clearer than using a generic `<div>`. This makes the code easier for developers to read, debug, update, and maintain.
+
+**3. Better browser and assistive technology support:** Semantic elements provide built-in meanings and behaviors. For example, a real `<button>` supports standard keyboard interaction, while table header elements help identify relationships between rows and columns. This can reduce the need for unnecessary ARIA attributes and custom JavaScript.
+
+However, semantic HTML alone does not guarantee full accessibility. Developers must also consider keyboard navigation, color contrast, alternative text, and usability testing.

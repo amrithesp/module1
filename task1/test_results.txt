@@ -1,0 +1,28 @@
+# JavaScript Execution Order Test
+
+## Purpose
+The purpose of this test was to compare normal, async, and defer JavaScript loading.
+
+## Scripts Tested
+- plain.js — normal script
+- async.js — asynchronous script
+- defer.js — deferred script
+
+## Console Output
+During my test, the browser console showed:
+
+Plain script executed at: 7:32:21 PM
+Async script executed at: 7:32:21 PM
+Defer script executed at: 7:32:21 PM
+
+## Explanation
+The normal script runs when the HTML parser reaches the script tag, so it can pause HTML parsing while it downloads and executes.
+
+The async script runs as soon as it has downloaded. Its execution order is not guaranteed relative to other scripts because it depends on when each script finishes downloading.
+
+The defer script downloads while HTML parsing continues and executes after HTML parsing is complete, before the DOMContentLoaded event.
+
+All three scripts displayed the same timestamp to the nearest second. This does not mean they executed simultaneously; the timestamp format does not show milliseconds.
+
+## Conclusion
+This test demonstrated the differences between normal, async, and defer script loading. The recorded timestamps were not precise enough to determine the exact execution order by themselves.

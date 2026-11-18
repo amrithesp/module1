@@ -1,0 +1,31 @@
+1. Explain the CSS Box Model
+
+[The CSS box model describes how every HTML element is displayed as a rectangular box.
+ It consists of four parts: content, padding, border, and margin.
+ The content is the actual text or image inside the element.
+ Padding creates space between the content and the border.
+ The border surrounds the padding and content.
+ Margin creates space outside the border and separates the element from other elements.
+ By default, CSS uses content-box, where padding and border are added to the declared width and height.
+ Using box-sizing: border-box includes padding and border inside the declared size, making layouts easier to control.]
+
+
+2. How does CSS Specificity work?
+
+[CSS specificity determines which CSS rule is applied when multiple rules target the same element.
+ The browser gives different levels of priority to different selectors.
+ Inline styles have the highest priority, followed by ID selectors, then class, attribute, and pseudo-class selectors, and finally element selectors.
+ For example, an ID selector has higher specificity than a class selector, so it normally overrides the class rule.
+ If two selectors have the same specificity, the rule written later is applied.
+ Specificity should be managed carefully to avoid complicated CSS.
+ It is better to use clear selectors rather than depending on !important.]
+
+
+3. When do you reach for Grid rather than Flexbox?
+
+[CSS Grid is useful when creating layouts that need control over both rows and columns.
+ It is especially useful for page structures such as headers, sidebars, main content areas, footers, dashboards, and card grids.
+ Grid allows you to define columns and rows and control how elements are placed within them.
+ Flexbox is mainly designed for arranging elements in one direction, either horizontally or vertically.
+ For example, navigation menus, buttons, and form rows are good uses for Flexbox.
+ Therefore, I would choose Grid when I need a two-dimensional page layout and Flexbox when I need simple one-dimensional alignment.]

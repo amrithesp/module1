@@ -1,0 +1,134 @@
+/* Global reset */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+    color: #1f2937;
+}
+
+/* ==========================================
+   1. Z-INDEX AND STACKING CONTEXT
+   ========================================== */
+
+.z-index-container {
+    position: relative;
+    height: 18rem;
+    margin-bottom: 2rem;
+}
+
+/* This parent has a lower stacking context */
+.parent-one {
+    position: absolute;
+    z-index: 1;
+    left: 1rem;
+    top: 1rem;
+    width: 15rem;
+    height: 12rem;
+    background-color: #dbeafe;
+}
+
+/* Despite z-index: 9999, this child cannot
+   escape its parent's stacking context */
+.box-one {
+    position: absolute;
+    z-index: 9999;
+    left: 2rem;
+    top: 2rem;
+    width: 12rem;
+    height: 8rem;
+    padding: 1rem;
+    background-color: blue;
+    color: white;
+}
+
+/* This parent has a higher stacking context */
+.parent-two {
+    position: absolute;
+    z-index: 2;
+    left: 7rem;
+    top: 5rem;
+    width: 15rem;
+    height: 12rem;
+    background-color: #fecaca;
+}
+
+/* This red box appears above the blue child
+   because its parent stacking context is higher */
+.box-two {
+    position: absolute;
+    z-index: 1;
+    left: 1rem;
+    top: 1rem;
+    width: 12rem;
+    height: 8rem;
+    padding: 1rem;
+    background-color: red;
+    color: white;
+}
+
+/* ==========================================
+   2. CSS SPECIFICITY
+   ========================================== */
+
+/* ID selector has higher specificity */
+#special-text {
+    color: red;
+}
+
+/* Class selector cannot override the ID */
+.highlight-text {
+    color: blue;
+}
+
+/* FIX: More specific selector overrides the ID rule */
+#special-text.highlight-text {
+    color: green;
+}
+
+/* ==========================================
+   3. MARGIN COLLAPSE
+   ========================================== */
+
+/* Example A: Parent and child margins can collapse */
+.collapse-parent {
+    background-color: #e5e7eb;
+    margin-top: 2rem;
+}
+
+.collapse-child {
+    background-color: lightblue;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+/* Example B: flow-root prevents parent-child
+   margin collapse */
+.no-collapse-parent {
+    display: flow-root;
+    background-color: #d1fae5;
+    margin-top: 2rem;
+}
+
+.no-collapse-child {
+    background-color: lightgreen;
+    margin-top: 2rem;
+    padding: 1rem;
+}
+
+/* Common styling */
+.diagnostic-section {
+    margin: 2rem 0;
+    padding: 1rem;
+    border: 1px solid #9ca3af;
+    border-radius: 0.5rem;
+}
+
+.diagnostic-section h2 {
+    margin-top: 0;
+}

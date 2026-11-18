@@ -1,0 +1,87 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 2rem;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.demo {
+    position: relative;
+    height: 12rem;
+    margin-bottom: 2rem;
+    border: 0.125rem solid #333;
+}
+
+.demo h2 {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.center-item {
+    width: 12rem;
+    padding: 1rem;
+    text-align: center;
+    background-color: #2563eb;
+    color: white;
+    border-radius: 0.5rem;
+}
+
+/* Choose Flexbox when you need to align items easily
+   along both the horizontal and vertical axes. */
+.flex-demo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-demo h2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+/* Choose Grid when you want simple two-dimensional
+   alignment and need to center an item quickly. */
+.grid-demo {
+    display: grid;
+    place-items: center;
+}
+
+.grid-demo h2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+/* Choose absolute positioning with transform when
+   the element needs to be positioned independently
+   from the normal document flow. */
+.absolute-demo .center-item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Choose absolute positioning with auto margin when
+   the element has a known width and height and needs
+   to be centered inside a positioned container. */
+.auto-demo .center-item {
+    position: absolute;
+    inset: 0;
+    width: 12rem;
+    height: 4rem;
+    margin: auto;
+}
